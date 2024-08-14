@@ -9,6 +9,7 @@ export default function Doc({ meta, content }) {
 
 export async function getStaticProps({ params }) {
   const doc = getDocBySlug(params.slug);
+  
   const content = await markdownToHtml(doc.content || '');
 
   return {
