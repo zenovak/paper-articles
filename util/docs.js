@@ -19,3 +19,14 @@ export function getAllDocs() {
 
   return docs;
 }
+
+
+/**
+ * gets the markdown file content from filesystem
+ * @param {*} filepath string of file path 
+ * @returns 
+ */
+export function getDocByPath(filepath) {
+  const contents = fs.readFileSync(process.cwd() + filepath, 'utf8');
+  return contents
+}
