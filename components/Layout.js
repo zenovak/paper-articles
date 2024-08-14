@@ -108,7 +108,6 @@ export default function Layout({ children, meta: pageMeta }) {
       <div id="skip">
         <article
           className={"prose lg:prose-xl px-8 m-auto my-4 sm:my-16 "}
-          // prose-inline-code:before:content-none to
           dangerouslySetInnerHTML={{ __html: children }}
         />
       </div>

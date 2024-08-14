@@ -102,7 +102,7 @@ This makes mistaken assumption heavily punished with difficult to find bugs. Whe
 ---
 ## Pictures and links?
 
-![](/public/vercel.svg)
+![](/vercel.svg)
 
 Heres code and links
 
