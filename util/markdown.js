@@ -1,6 +1,6 @@
 import { remark } from 'remark';
 import remarkGfm from 'remark-gfm';
-import { remarkAlert } from 'remark-github-blockquote-alert'
+import { remarkAlert } from 'remark-github-blockquote-alert';
 import html from 'remark-html';
 import prism from 'remark-prism';
 import remarkToc from 'remark-toc';
