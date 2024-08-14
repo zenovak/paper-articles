@@ -75,15 +75,37 @@ This makes mistaken assumption heavily punished with difficult to find bugs. Whe
 <br>
 
 > [!WARNING] 
-> dotProduct under unit vector
+> This is a github synthax
 
 > [!WARNING] 
-> dotProduct under unit vector
+> This is a github synthax
 > The demonstated dotProduct behavior only applies to unit vectors (Normalized Vectors). 
 
 
-> [!WARNING/dotProduct] 
-> dotProduct under unit vector
+> [!warning] This is obsidian syntax
 > The demonstated dotProduct behavior only applies to unit vectors (Normalized Vectors). 
+
+> [!note] This is obsidian syntax 
+> We use BitWise *AND-EQUAL*, on a ~mask
+> 
+>```
+>     00010100
+>&=  11101111
+> ---------------
+>     00000100
+>```
+> We use this to remove a bit from our bitflag. This is called "clearing bits"
+> `new attribute is attributes ∩ X' `
+
+<br><br>
+
+---
+## Pictures and links?
+
+![](/public/vercel.svg)
+
+Heres code and links
+
+`code` and [`code with link`](https://www.google.com/)
 
 
