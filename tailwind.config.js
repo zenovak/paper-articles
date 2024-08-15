@@ -15,6 +15,36 @@ module.exports = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+
+      typography: {
+        DEFAULT: {
+          css: {
+            // color: '#333',
+            blockquote: {
+              paddingInlineStart: "unset",
+              padding: "1rem 1rem 1rem 3rem"
+            },
+          },
+        },
+        lg: {
+          css: {
+            // color: '#333',
+            blockquote: {
+              paddingInlineStart: "unset",
+              padding: "1rem 1rem 1rem 3rem"
+            },
+          },
+        },
+        sm: {
+          css: {
+            // color: '#333',
+            blockquote: {
+              paddingInlineStart: "unset",
+              padding: "1rem 1rem 1rem 3rem"
+            },
+          },
+        }
+      },
     },
   },
   plugins: [
