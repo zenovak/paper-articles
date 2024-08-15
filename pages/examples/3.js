@@ -6,7 +6,7 @@ import html from 'remark-html';
 
 import remarkObsidianCallout from "remark-obsidian-callout";
 import rehypeRaw from "rehype-raw";
-import { remarkAlert } from 'remark-github-blockquote-alert';
+import rehypeHighlight from "rehype-highlight";
 
 
 export function getStaticProps() {
@@ -14,15 +14,21 @@ export function getStaticProps() {
     return { props: { content } }
   }
 
+/**
+ * This Example uses most of the popular readily made plugins, and CSS typography
+ * @param {*} param0 
+ * @returns 
+ */
 export default function WithPluginsToo({content}){
     return (
         <Markdown
-            remarkPlugins={[html, remarkGfm, remarkAlert]}
-            rehypePlugins={[rehypeRaw]}
+            remarkPlugins={[html, remarkGfm, remarkObsidianCallout]}
+            rehypePlugins={[rehypeRaw, rehypeHighlight]}
             className={"max-w-7xl mx-auto prose lg:prose-lg " +
+                "prose:ps-[unset] prose-lg:ps-[unset] " +
                 "prose-inline-code:before:content-none prose-inline-code:after:content-none " +
                 "prose-inline-code:bg-[#f6f6f7] prose-inline-code:px-1.5 prose-inline-code:py-1 " +
-                "prose-inline-code:rounded-md "
+                "prose-inline-code:rounded-md prose-blockquote:ps-[unset] "
             }
         >
             {content}

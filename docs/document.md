@@ -108,4 +108,5 @@ Heres code and links
 
 `code` and [`code with link`](https://www.google.com/)
 
+`inline code with white spaces           `
 
