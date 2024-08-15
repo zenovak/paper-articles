@@ -13,6 +13,7 @@ import remarkToc from 'remark-toc';
 
 import { unified } from 'unified';
 import rehypeCodeHeaders from './plugins/rehype-code-headers';
+import remarkObsidianCallout from './plugins/remark-obsidian';
 
 
 export default async function markdownToHtml(markdown) {
@@ -33,9 +34,10 @@ export async function markdownToHtml2(markdown) {
     .use(remarkParse)
     // .use(prism)
     .use(remarkGfm)
+    .use(remarkObsidianCallout)
     .use(remarkRehype, { allowDangerousHtml: true})
-    .use(rehypeCodeHeaders)
     .use(rehypeRaw)
+    .use(rehypeCodeHeaders)
     .use(rehypeHighlight)
     .use(rehypeStringify)
     .process(markdown)

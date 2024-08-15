@@ -12,13 +12,27 @@
 }
 
 
+.callout-title {
+    position: relative;
+}
+
+.callout-title-icon {
+    position: absolute;
+    left: -2rem;
+}
+
 
 .callout-warning {
     padding-top: 1rem;
     padding-right: 1rem;
     padding-bottom: 1rem;
+    padding-left: 3rem;
     border-left: 0;
+    border-radius: 0.675rem;
+    margin-bottom: 1rem;
+
     background: var(--prompt-warning-bg);
+
 }
 
 

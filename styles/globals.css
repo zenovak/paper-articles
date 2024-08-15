@@ -2,8 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+@import "markdown/_markdown_zen.css";
 @import "markdown/_markdown.css";
+
 @import "markdown/_code_github.css";
+@import "markdown/_github_alert.css";
 @import "markdown/_callout.css";
 
 :root {

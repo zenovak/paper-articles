@@ -1,0 +1,173 @@
+/**
+ * Chirpy-like theme for Markdown rendered HTML
+ * @author zenovak
+ */
+
+
+.markdown-body-zen {
+
+    color: var(--fgColor-default);
+
+    /* Constants */
+    --base-size-4: 0.25rem;
+    --base-size-8: 0.5rem;
+    --base-size-16: 1rem;
+    --base-text-weight-normal: 400;
+    --base-text-weight-medium: 500;
+    --base-text-weight-semibold: 600;
+    --fontStack-monospace: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace;
+}
+
+/* color-scheme */
+@media (prefers-color-scheme: dark) {
+    .markdown-body-zen,
+    [data-theme="dark"] {
+        color-scheme: dark;
+
+        --fgColor-accent: #0969da;
+        --fgColor-accent-focus: #1f6feb;
+
+        --bgColor-default: #f3f3f3;
+        --bgColor-alert: "";
+        --bgColor-code: #f6f6f7;
+
+        --borderColor-default: #30363db3;
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    .markdown-body-zen,
+    [data-theme="light"] {
+        color-scheme: light;
+
+        --fgColor-default: #34343c;
+        --fgColor-accent: #1f6feb;
+        --fgColor-accent-focus: #0969da;
+
+        --bgColor-default: #f3f3f3;
+        --bgColor-alert: "";
+        --bgColor-code: #f6f6f7;
+
+
+        --borderColor-default: #f3f3f3;
+
+    }
+}
+
+/* Sizes on display changes */
+
+
+/* Types */
+.markdown-body-zen h2, .markdown-body-zen h3, .markdown-body-zen h4, h5 {
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+.markdown-body-zen p {
+    margin-top: 0;
+    margin-bottom: 1.25rem;
+}
+
+.markdown-body-zen h1 {
+    font-size: 2.5rem;
+    font-weight: var(--base-text-weight-medium);
+}
+
+.markdown-body-zen h2 {
+    font-size: 2rem;
+    font-weight: var(--base-text-weight-medium);
+}
+
+.markdown-body-zen h3 {
+    font-size: 1.75rem;
+    font-weight: var(--base-text-weight-medium);
+}
+
+.markdown-body-zen h4 {
+    font-size: 1.5rem;
+}
+
+.markdown-body-zen h5 {
+    font-size: 1.25rem;
+}
+ 
+
+.markdown-body-zen p {
+    font-size: var(--base-size-16);
+}
+
+.markdown-body-zen a {
+    color: var(--fgColor-accent);
+    text-decoration: none;
+}
+
+
+.markdown-body-zen hr {
+    box-sizing: content-box;
+    overflow: hidden;
+    background: transparent;
+    border-bottom: 1px solid var(--borderColor-muted);
+    height: .25em;
+    padding: 0;
+    margin: 24px 0;
+    background-color: var(--borderColor-default);
+    border: 0;
+}
+
+
+
+/* Code block */
+.markdown-body-zen pre code, .markdown-body pre tt {
+    display: inline;
+    max-width: auto;
+    padding: 0;
+    margin: 0;
+    overflow: visible;
+    line-height: inherit;
+    word-wrap: normal;
+    background-color: transparent;
+    border: 0;
+}
+
+.markdown-body-zen pre>code {
+    padding: 0;
+    margin: 0;
+    word-break: normal;
+    white-space: pre;
+    background: transparent;
+    border: 0;
+}
+
+/* inline-code */
+.markdown-body-zen code {
+    padding: .2rem .4rem;
+    background-color: var(--bgColor-code);
+    border-radius: 0.375rem;
+    font-size: 0.875rem;
+}
+
+
+/* table */
+.markdown-body-zen table {
+    width: 100%;
+    table-layout: auto;
+}
+
+.markdown-body-zen th {
+    padding-bottom: 0.75rem;
+}
+
+.markdown-body-zen tr {
+    border-bottom-width: 1px;
+    border-bottom-color: var(--borderColor-default);
+}
+
+.markdown-body-zen td {
+    padding: 0.75rem 0.75rem 0.75rem 0;
+}
+
+
+/* Hover states */
+.markdown-body-zen a:hover {
+    color: var(--fgColor-accent-focus);
+  }
