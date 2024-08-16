@@ -3,17 +3,37 @@
     --prompt-text-color: rgb(46, 46, 46, 0.77);
     --prompt-tip-bg: rgb(123, 247, 144, 0.2);
     --prompt-tip-icon-color: #03b303;
+    --prompt-tip-text-color: #003d00ab;
     --prompt-info-bg: #e1f5fe;
     --prompt-info-icon-color: #0070cb;
+    --prompt-info-text-color: #002646c9;
     --prompt-warning-bg: rgb(255, 243, 205);
     --prompt-warning-icon-color: #ef9c03;
+    --prompt-warning-text-color: #4e3300c9;
     --prompt-danger-bg: rgb(248, 215, 218, 0.56);
     --prompt-danger-icon-color: #df3c30;
+    --prompt-danger-text-color: #4d120ec4;
 }
 
+blockquote[class^=callout-] {
+    border-left: 0;
+    border-radius: 0.675rem;
+    margin-bottom: 1rem;
+
+    /* sm behavior */
+    margin-left: -1rem;
+    margin-right: -1rem;
+
+    padding: 1rem 1rem 1rem 3rem;
+    color: var(--prompt-text-color); 
+
+    font-weight: 400;
+}
 
 .callout-title {
     position: relative;
+    width: 100%;
+    min-height: 1.25rem;
 }
 
 .callout-title-icon {
@@ -21,18 +41,76 @@
     left: -2rem;
 }
 
+.callout-title-icon > svg {
+    width: 1.25rem;
+    height: 1.25rem;
+}
 
-.callout-warning {
-    padding-top: 1rem;
-    padding-right: 1rem;
-    padding-bottom: 1rem;
-    padding-left: 3rem;
-    border-left: 0;
-    border-radius: 0.675rem;
-    margin-bottom: 1rem;
-
-    background: var(--prompt-warning-bg);
-
+.callout-title-text {
+    font-weight: 700;
 }
 
 
+
+/* Color schemes for prompts */
+.callout-warning {
+    background: var(--prompt-warning-bg);
+}
+
+.callout-warning > .callout-title > .callout-title-icon {
+    color: var(--prompt-warning-icon-color);
+}
+
+.callout-warning > .callout-title > .callout-title-text {
+    color: var(--prompt-warning-text-color);
+}
+
+.callout-danger {
+    background: var(--prompt-danger-bg);
+}
+
+.callout-danger > .callout-title > .callout-title-icon {
+    color: var(--prompt-danger-icon-color);
+}
+
+.callout-danger > .callout-title > .callout-title-text {
+    color: var(--prompt-danger-text-color);
+}
+
+
+.callout-info {
+    background: var(--prompt-info-bg);
+}
+
+.callout-info > .callout-title > .callout-title-icon {
+    color: var(--prompt-info-icon-color);
+}
+
+.callout-info > .callout-title > .callout-title-text {
+    color: var(--prompt-info-text-color);
+}
+
+.callout-note {
+    background-color: var(--prompt-info-bg);
+}
+
+.callout-note > .callout-title > .callout-title-icon {
+    color: var(--prompt-info-icon-color);
+}
+
+.callout-note > .callout-title > .callout-title-text {
+    color: var(--prompt-info-text-color);
+}
+
+
+.callout-tip {
+    background: var(--prompt-tip-bg);
+}
+
+.callout-tip > .callout-title > .callout-title-icon {
+    color: var(--prompt-tip-icon-color);
+}
+
+.callout-tip > .callout-title > .callout-title-text {
+    color: var(--prompt-tip-text-color);
+}

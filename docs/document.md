@@ -120,16 +120,43 @@ This makes mistaken assumption heavily punished with difficult to find bugs. Whe
 > We use this to remove a bit from our bitflag. This is called "clearing bits"
 > `new attribute is attributes ∩ X' `
 
+
+> [!tip] Here's a tip
+> Wash your car
+
+> [!danger] Here's some danger
+> Please wash your car
+
 <br><br>
 
 ---
 ## Pictures and links?
 
+Below represents a picture from svg format. Very big
+
 ![](/vercel.svg)
+
+
+Lorem ipsum odor amet, consectetuer adipiscing elit. Facilisis ut maecenas magna eget mus habitant ridiculus erat. Platea velit nascetur phasellus elementum quam natoque curabitur. Ultrices curae convallis tristique leo cras. Magna odio parturient; vulputate fames tempor dis pretium risus. Ultrices porta vehicula litora mus tortor conubia. Risus vulputate in malesuada sapien, sagittis vulputate sollicitudin. Dapibus sed arcu efficitur faucibus efficitur. Netus placerat maecenas blandit tempus primis diam mollis ullamcorper. Fermentu
+
+![](/attachments/example-nature.webp)
+
+
 
 Heres code and links
 
 `code` and [`code with link`](https://www.google.com/)
 
 `inline code with white spaces           `
+
+<br><br>
+
+---
+## Here's some vanilla quotes
+
+> Hello 
+> Goodbye
+
+> Hello i am *itallic*  and I am **bold** and I am ***bold italic***
+
 
