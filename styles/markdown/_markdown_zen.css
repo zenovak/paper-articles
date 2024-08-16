@@ -17,7 +17,7 @@
 
 /* color-scheme */
 @media (prefers-color-scheme: dark) {
-    .markdown-body-zen,
+    :root,
     [data-theme="dark"] {
         color-scheme: dark;
 
@@ -28,7 +28,7 @@
         --text-code-color: #c9def1;
 
         --fgColor-accent: rgb(138, 180, 248);
-        --fgColor-accent-focus: #113e83;
+        --fgColor-accent-focus: rgb(116, 178, 243);
 
         --bgColor-default: rgb(27, 27, 30);
         --bgColor-code: #323238;
@@ -39,7 +39,7 @@
 }
 
 @media (prefers-color-scheme: light) {
-    .markdown-body-zen,
+    :root,
     [data-theme="light"] {
         color-scheme: light;
 
@@ -82,7 +82,7 @@
 
 .markdown-body-zen p {
     margin-top: 0;
-    margin-bottom: 1.25rem;
+    margin-bottom: 1rem;
 }
 
 .markdown-body-zen h1 {
@@ -160,7 +160,7 @@
     overflow-y: auto;
 }
 
-.markdown-body-zen pre code, .markdown-body pre tt {
+.markdown-body-zen pre code, .markdown-body-zen pre tt {
     display: inline;
     max-width: auto;
     padding: 0;
@@ -211,6 +211,14 @@
     padding: 0.75rem 0.75rem 0.75rem 0;
 }
 
+
+/* Media */
+.markdown-body-zen img {
+    border-radius: .675rem;
+
+    /* Tailwind shadow */
+    box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2), 1px 3px 8px 0 rgba(0, 0, 0, 0.19);
+}
 
 /* Hover states */
 .markdown-body-zen a:hover {

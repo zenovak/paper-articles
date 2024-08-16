@@ -14,6 +14,7 @@ import remarkToc from 'remark-toc';
 import { unified } from 'unified';
 import rehypeCodeHeaders from './plugins/rehype-code-headers';
 import remarkObsidianCallout from './plugins/remark-obsidian';
+import rehypeSlug from 'rehype-slug';
 
 
 export default async function markdownToHtml(markdown) {
@@ -37,8 +38,9 @@ export async function markdownToHtml2(markdown) {
     .use(remarkObsidianCallout)
     .use(remarkRehype, { allowDangerousHtml: true})
     .use(rehypeRaw)
-    .use(rehypeCodeHeaders)
-    .use(rehypeHighlight)
+    .use(rehypeCodeHeaders)                        // custom plugin to add code headers
+    .use(rehypeHighlight)                          // syntax highlighting
+    .use(rehypeSlug)                               // add ids to headings automatically, for Toc support
     .use(rehypeStringify)
     .process(markdown)
   return result.toString();
