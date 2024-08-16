@@ -36,7 +36,7 @@ export default function UsingRemarkDirectly({content}) {
 
     return (
         <main
-            className="max-w-7xl mx-auto md:flex px-1"
+            className="max-w-7xl mx-auto md:flex"
         > 
             <article 
                 className="js-toc-content max-w-3xl mx-auto px-4 markdown-body-zen"

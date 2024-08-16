@@ -29,6 +29,10 @@ a.toc-link {
     padding: .2rem 0 .2rem 1.25rem;;
 }
 
+a.toc-link:hover {
+    color: var(--fgColor-accent);
+}
+
 .is-collapsible {
     max-height: 1000px;
     overflow: hidden;
@@ -47,7 +51,7 @@ a.toc-link {
 .is-active-link {
     font-weight: 600;
 
-    color: var(--fgColor-accent) !important;
+    color: var(--fgColor-accent-focus) !important;
 }
 
 .toc-link::before {

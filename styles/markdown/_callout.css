@@ -36,15 +36,35 @@
     }
 }
 
+/* PC */
+@media (min-width: 1024px ) {
+    
+}
+
+@media (min-width: 640px) {
+    blockquote[class^=callout-] {
+        --border-radius: 0.675rem;
+        --margin-left: 0rem;
+        --margin-right: 0rem;
+    }
+}
+
+@media (max-width: 640px) {
+    blockquote[class^=callout-] {
+        --border-radius: 0rem;
+        --margin-left: -1rem;
+        --margin-right: -1rem;
+    }
+}
+
 
 blockquote[class^=callout-] {
     border-left: 0;
-    border-radius: 0.675rem;
-    margin-bottom: 1rem;
+    border-radius: var(--border-radius);
 
-    /* sm behavior */
-    margin-left: -1rem;
-    margin-right: -1rem;
+    margin-left: var(--margin-left);
+    margin-right: var(--margin-right);
+    margin-bottom: 1rem;
 
     padding: 1rem 3rem 1rem 3rem;
     color: var(--prompt-text-color); 
