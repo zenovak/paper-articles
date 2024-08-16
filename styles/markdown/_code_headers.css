@@ -1,0 +1,89 @@
+
+.code-block {
+    --icon-color: rgb(46, 46, 46, 0.77);
+    --header-color: #f6f6f7;
+
+    --button-bg: #353434;
+    --button-hover-bg: #464646;
+    --button-text-color: #CCCCCC;
+    --button-hover-text-color: #8bb9fe;
+    --button-border-radius: 10px;
+    --button-diameter: 36px;
+    --button-outline-width: 1px;
+    --button-outline-color: rgb(141, 141, 141);
+}
+
+
+.code-block-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding-left: 1rem;
+    padding-right: 1rem;
+
+    background: var(--header-color);
+}
+
+
+/* Language label */
+.code-block-title-lang{
+    margin-bottom: 0 !important;
+    display: block;
+}
+
+
+/* Button */
+.code-block-title-btn {
+    color: var(--icon-color);
+}
+  
+.code-block-title-btn {
+    box-sizing: border-box;
+    width: var(--button-diameter);
+    height: var(--button-diameter);
+    border-radius: var(--button-border-radius);
+    background-color: var(--button-bg);
+    color: var(--button-text-color);
+    border: none;
+    cursor: pointer;
+    position: relative;
+    outline: none;
+}
+
+.code-block-title-btn svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.checkmark {
+    display: none;
+}
+
+/* actions */
+.code-block-title-btn:focus:not(:focus-visible) .code-block-title-lang {
+    display: none;
+}
+
+.code-block-title-btn:focus:not(:focus-visible) .clipboard {
+    display: none;
+}
+
+.code-block-title-btn:focus:not(:focus-visible) .checkmark {
+    display: block;
+}
+
+.code-block-title-btn:hover,
+.code-block-title-btn:focus {
+    background-color: var(--button-hover-bg);
+}
+
+.code-block-title-btn:active {
+    outline: var(--button-outline-width) solid var(--button-outline-color);
+}
+
+.code-block-title-btn:hover svg {
+    color: var(--button-hover-text-color);
+}

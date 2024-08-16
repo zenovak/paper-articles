@@ -8,6 +8,7 @@
 @import "markdown/_code_github.css";
 @import "markdown/_github_alert.css";
 @import "markdown/_callout.css";
+@import "markdown/_code_headers.css";
 
 :root {
   --foreground-rgb: 0, 0, 0;
