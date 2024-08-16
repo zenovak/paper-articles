@@ -1,19 +1,41 @@
 
-:root {
-    --prompt-text-color: rgb(46, 46, 46, 0.77);
-    --prompt-tip-bg: rgb(123, 247, 144, 0.2);
-    --prompt-tip-icon-color: #03b303;
-    --prompt-tip-text-color: #003d00ab;
-    --prompt-info-bg: #e1f5fe;
-    --prompt-info-icon-color: #0070cb;
-    --prompt-info-text-color: #002646c9;
-    --prompt-warning-bg: rgb(255, 243, 205);
-    --prompt-warning-icon-color: #ef9c03;
-    --prompt-warning-text-color: #4e3300c9;
-    --prompt-danger-bg: rgb(248, 215, 218, 0.56);
-    --prompt-danger-icon-color: #df3c30;
-    --prompt-danger-text-color: #4d120ec4;
+@media (prefers-color-scheme: light) {
+    :root {
+        --prompt-text-color: rgb(46, 46, 46, 0.77);
+        --prompt-tip-bg: rgb(123, 247, 144, 0.2);
+        --prompt-tip-icon-color: #03b303;
+        --prompt-tip-text-color: #003d00ab;
+        --prompt-info-bg: #c9ebfac4;
+        --prompt-info-icon-color: #0070cb;
+        --prompt-info-text-color: #002646c9;
+        --prompt-warning-bg: rgb(255, 243, 205);
+        --prompt-warning-icon-color: #ef9c03;
+        --prompt-warning-text-color: #4e3300c9;
+        --prompt-danger-bg: rgb(248, 215, 218, 0.56);
+        --prompt-danger-icon-color: #df3c30;
+        --prompt-danger-text-color: #4d120ec4;
+    }
 }
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --prompt-text-color: rgb(216, 212, 212, 0.75);
+        --prompt-tip-bg: rgb(22, 60, 36, 0.64);
+        --prompt-tip-icon-color: rgb(15, 164, 15, 0.81);
+        --prompt-tip-text-color: #45ff45ab;
+        --prompt-info-bg: rgb(7, 59, 104, 0.8);
+        --prompt-info-icon-color: #0075d1;
+        --prompt-info-text-color: #53b2ffc9;
+        --prompt-warning-bg: rgb(90, 69, 3, 0.88);
+        --prompt-warning-icon-color: rgb(255, 165, 0, 0.8);
+        --prompt-warning-text-color: #ffc65cc9;
+        --prompt-danger-bg: rgb(86, 28, 8, 0.8);
+        --prompt-danger-icon-color: #cd0202;
+        --prompt-danger-text-color: #ff5c51c4;
+
+    }
+}
+
 
 blockquote[class^=callout-] {
     border-left: 0;
