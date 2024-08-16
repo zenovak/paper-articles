@@ -141,10 +141,8 @@
 
 /* Code block */
 .markdown-body-zen pre {
-    background-color: var(--bgColor-code);
     padding: 1rem;
     margin-bottom: 1rem;
-    border-radius: .675rem;
 }
 
 .markdown-body-zen pre code, .markdown-body pre tt {

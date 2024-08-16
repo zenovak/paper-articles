@@ -24,7 +24,7 @@ blockquote[class^=callout-] {
     margin-left: -1rem;
     margin-right: -1rem;
 
-    padding: 1rem 1rem 1rem 3rem;
+    padding: 1rem 3rem 1rem 3rem;
     color: var(--prompt-text-color); 
 
     font-weight: 400;
@@ -50,6 +50,9 @@ blockquote[class^=callout-] {
     font-weight: 700;
 }
 
+.callout-content {
+    color: var(--prompt-text-color);
+}
 
 
 /* Color schemes for prompts */
