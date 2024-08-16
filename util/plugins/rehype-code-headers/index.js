@@ -15,7 +15,7 @@ function wrapper(lang, content) {
           {
             type: 'element',
             tagName: 'p',
-            properties: { className: ['code-bloc-title-lang'] },
+            properties: { className: ['code-block-title-lang'] },
             children: [ 
               {
                 type: 'text',
@@ -27,7 +27,7 @@ function wrapper(lang, content) {
             type: 'element',
             tagName: 'button',
             properties: { 
-              className: ['code-bloc-title-btn'],
+              className: ['code-block-title-btn'],
               onClick: "const parent = this.closest('.code-block'); const codeBlock = parent.querySelector('code'); navigator.clipboard.writeText(codeBlock.textContent);"
             },
             children: [ ]
@@ -45,6 +45,10 @@ function wrapper(lang, content) {
   return wrapperObj;
 }
 
+function identifyCodeLang(codeNode) {
+
+}
+
 
 /**
  * A rehype component that wraps around <pre> to provide language label and copy button.
@@ -58,7 +62,6 @@ export default function rehypeCodeHeaders(){
       if (node.tagName == "pre") {
           // create copy of the node
           const newNode = Object.assign({}, node);
-
           // asign it to the current node, dont use = cuz its broken
           Object.assign(node, wrapper("lang", newNode));
           return [SKIP];
