@@ -159,4 +159,105 @@ Heres code and links
 
 > Hello i am *itallic*  and I am **bold** and I am ***bold italic***
 
+<br><br>
+
+---
+## Some codes
+
+
+```gradle
+dependencies {
+    // Local Library Module Dependency
+    implementation project(":mylibrary")
+    
+    // Local binary dependency
+    implementation fileTree(dir: "libs", includes: ['*.jar'])
+    
+    // Alternatively, to specify specific files...
+    implement files("libs/myFile.jar", "libs/myOtherfile.jar")
+    
+    // Remote binary dependencies
+    implementation "com.example.android:app-magic:12.3"
+}
+```
+
+
+```java
+public class ModBlocks {
+	public static Block register(Block block, String name, boolean shouldRegisterItem) {
+		// Register the block and its item.
+		Identifier id = Identifier.of(FabricDocsReference.MOD_ID, name);
+        
+		// Sometimes, you may not want to register an item for the block.
+		// Eg: if it's a technical block like `minecraft:air` or `minecraft:end_gateway`
+		if (shouldRegisterItem) {
+			BlockItem blockItem = new BlockItem(block, new Item.Settings());
+			Registry.register(Registries.ITEM, id, blockItem);
+		}
+        
+		return Registry.register(Registries.BLOCK, id, block);
+	}
+}
+```
+
+Some JSX
+
+```jsx
+import remarkGfm from "remark-gfm";
+import remarkObsidianCallout from "remark-obsidian-callout";
+
+import rehypeRaw from "rehype-raw";
+
+export default function WithTailWind({content}){
+    return (
+        <Markdown
+            remarkPlugins={[remarkGfm, remarkObsidianCallout]}
+            rehypePlugins={[rehypeRaw]}
+            className={"max-w-7xl mx-auto prose lg:prose-lg " +
+            "prose-inline-code:before:content-none prose-inline-code:after:content-none " +
+            "prose-inline-code:bg-[#f6f6f7] prose-inline-code:px-1.5 prose-inline-code:py-1 " +
+            "prose-inline-code:rounded-md "
+            }
+        >
+            {content}
+        </Markdown>
+    );
+}
+```
+
+
+
+some xml for android
+```xml
+<?xml version="1.0" encoding="utf-8"?>  
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" 
+    xmlns:tools="http://schemas.android.com/tools">
+    <uses-permission 
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+        
+    <application        
+        android:allowBackup="true"  
+        android:dataExtractionRules="@xml/data_extraction_rules"  
+        android:fullBackupContent="@xml/backup_rules"  
+        android:icon="@mipmap/ic_launcher"  
+        android:label="@string/app_name"  
+        android:roundIcon="@mipmap/ic_launcher_round"  
+        android:supportsRtl="true"  
+        android:theme="@style/Theme.ConverterApp"  
+        tools:targetApi="31">  
+        
+        <activity            
+            android:name=".MainActivity"  
+            android:exported="true">
+            <intent-filter>                
+                <action 
+                    android:name="android.intent.action.MAIN"/> 
+                <category
+                    android:name="android.intent.category.LAUNCHER"/>  
+            </intent-filter>        
+        </activity>    
+    </application>  
+</manifest>
+```
+
 

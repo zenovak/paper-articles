@@ -18,7 +18,7 @@ export async function getStaticProps() {
 export default function UsingRemarkDirectly({content}) {
     return (
         <article 
-            className=" max-w-7xl mx-auto px-4 markdown-body-zen"
+            className="max-w-7xl mx-auto px-4 markdown-body-zen"
             dangerouslySetInnerHTML={{ __html: content }}
         />
     )

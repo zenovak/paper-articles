@@ -5,6 +5,8 @@ const codeLanguageDisplay = {
     cpp: "C++",
     dart: "Dart",
     flutter: "Flutter",
+    gradle: "Gradle",
+    html: "HTML",
     kt: "Kotlin",
     kotlin: "Kotlin",
     java: "Java",
@@ -12,7 +14,10 @@ const codeLanguageDisplay = {
     jsx: "Jsx",
     py: "Python",
     python: "Python",
+    ts: "TypeScript",
     txt: "Plain Text",
+    xml: "XML",
+    xaml: "XAML"
 }
 
 
@@ -41,8 +46,9 @@ function identifyCodeLang(codeNode) {
 export function getCodeLangugage(codeNode) {
     var langString = identifyCodeLang(codeNode);
 
-    if (!langString in codeLanguageDisplay) {
-        return codeLanguageDisplay.txt;
+    if (!(langString in codeLanguageDisplay)) {
+        console.log("RehypeCodeHeaders: Code Lang label is not in record. showing " + langString);
+        return langString;
     }
     return codeLanguageDisplay[langString];
 }
