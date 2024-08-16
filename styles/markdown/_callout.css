@@ -68,6 +68,7 @@ blockquote[class^=callout-] {
     color: var(--prompt-warning-text-color);
 }
 
+
 .callout-danger {
     background: var(--prompt-danger-bg);
 }
@@ -78,6 +79,18 @@ blockquote[class^=callout-] {
 
 .callout-danger > .callout-title > .callout-title-text {
     color: var(--prompt-danger-text-color);
+}
+
+.callout-bug {
+    background: var(--prompt-danger-bg);
+}
+
+.callout-bug > .callout-title > .callout-title-icon {
+    color: var(--prompt-danger-icon-color);
+}
+
+.callout-bug > .callout-title > .callout-title-text {
+    background: var(--prompt-danger-text-color);
 }
 
 

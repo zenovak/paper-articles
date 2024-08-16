@@ -270,9 +270,9 @@ const remarkObsidianCallout: Plugin = (customConfig?: Partial<Config>) => {
                 callouts[calloutType.toLowerCase()]
               }</${iconTagName}>
              ${
-               title &&
+              //  If no title, use default callout title
                `<${titleTextTagName} class="${titleTextClass}">${titleTextTransform(
-                 title
+                 title || (calloutType[0].toUpperCase() + calloutType.slice(1))
                )}</${titleTextTagName}>`
              }
               </div>
