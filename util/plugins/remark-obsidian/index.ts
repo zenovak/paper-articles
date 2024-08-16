@@ -276,7 +276,7 @@ const remarkObsidianCallout: Plugin = (customConfig?: Partial<Config>) => {
                )}</${titleTextTagName}>`
              }
               </div>
-              ${remainingContent && `<div class="${contentClass}">${remainingContent}</div>`}`,
+              ${remainingContent && `<p class="${contentClass}">${remainingContent}</p>`}`,
             };
 
             (node as Parent).children.splice(0, 1, titleHtmlNode);
