@@ -1,3 +1,9 @@
+/*
+ * Created on Sat Aug 17 2024
+ * The following are the default CSS for code headers.
+ * Copyright (c) 2024 - zenovak
+ */
+
 @media (prefers-color-scheme: light) {
     .code-block {
         --header-bg-color: #f6f6f7;
@@ -17,13 +23,13 @@
 
 @media (prefers-color-scheme: dark) {
     .code-block {
-        --header-bg-color: #353434;
+        --header-bg-color: #242424;
         --label-text-color: #a3a3a3;
 
-        --body-bg-color: #353434;
-        --border-color: #ececec;
+        --body-bg-color: #242424;
+        --border-color: transparent;
     
-        --button-bg: #353434;
+        --button-bg: transparent;
         --button-hover-bg: #464646;
         --button-text-color: #CCCCCC;
         --button-hover-text-color: #8bb9fe;
@@ -68,8 +74,8 @@
     justify-content: space-between;
     align-items: center;
 
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+    border-top-left-radius: var(--border-radius);
+    border-top-right-radius: var(--border-radius);
     padding-left: 1rem;
 
     background: var(--header-bg-color);
