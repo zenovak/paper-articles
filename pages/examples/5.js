@@ -4,7 +4,6 @@ import { useEffect } from "react";
 import tocbot from "tocbot";
 
 
-
 export async function getStaticProps() {
     const markdown = getDocByPath("/docs/document.md");
     const content = await markdownToHtml2(markdown);
@@ -36,7 +35,7 @@ export default function UsingRemarkDirectly({content}) {
 
     return (
         <main
-            className="max-w-7xl mx-auto md:flex"
+            className="max-w-7xl mx-auto md:flex my-16"
         > 
             <article 
                 className="js-toc-content max-w-3xl mx-auto px-4 markdown-body-zen"

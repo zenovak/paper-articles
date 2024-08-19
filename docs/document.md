@@ -1,31 +1,13 @@
-# Title
+## Markdown Should be Simple
+Its hard to render markdown in react. Nothing ever works out of the box. Code syntax doesnt work, tables dont work, styling is terrible. Exisitng plugins like
+tailwind typography doesnt cover all use cases, not to mention the rabit hole that is *unified **plugins and co.***.
 
-## title
+This `NextJS` template was created just for devblogs. It includes a well put together collection of rehype and remark plugins, and CSS library to supports syntax highlighting, obsidian callouts, tables, Toc, everything you may need right out the box. Why spend more time editing your exiting notes for `MDX` syntax or browse for unified plugins when the bests of the bests are packaged ready out the box.
 
-### title
+Think simplicity -- like [Jekyll](https://chirpy.cotes.page/posts/text-and-typography/) themes brought straight into NextJS.
 
-#### title
-
-##### title
-
----
-
-An object's rotation is commonly referenced with the X axis being the origin `(1, 0)`, with pi represented as float. The equivalent of getting `normalizedVector.Angle()`. However, in theory you can use which every direction as you please to establish a *common reference*, as your only **visual** indicator of a ***direction*** is your sprite's
-
-
-[link](https://google.com)
-
-https://google.com
-
-
-<br><br>
-
----
-## A title
-An object's rotation is commonly referenced with the X axis being the origin `(1, 0)`, with pi represented as float. The equivalent of getting `normalizedVector.Angle()`. However, in theory you can use which every direction as you please to establish a common reference, as your only visual indicator of a direction is your sprite's
-
-
-Thus we can establish a fact table for radians as follows (Assuming North is Right as the diagram above):
+### Table
+Works like a charm. This CSS was partly sourced staight out of [`@tailwindcss/typography`](https://github.com/tailwindlabs/tailwindcss-typography)
 
 | Direction | Radiant | Pi expression | 
 | :-------: | :-----: |:-------------:|
@@ -38,12 +20,10 @@ Thus we can establish a fact table for radians as follows (Assuming North is Rig
 | WEST      | -1.571  |   - Pi / 2    |
 | NW        | -0.785  |   - Pi / 4    |
 
-<br>
 
-### Single vs structured data types.
-It is actually not very efficient to store true false values in the really large numbers.
-
-Let's start with an RPG game example where the character has a few attributes that are true or false. You may get away with doing something simple like this.
+### Code
+Packed with syntax highlighting. CSS and colors sourced from github style. I made some adjustments with a builtin custom rehype plugin that adds a *copy to clipboard* button
+writtin in VanillaJS and a language label
 
 ```cs
 // This is known as structured data type:
@@ -56,6 +36,11 @@ struct attributes {
 }
 ```
 
+### Callouts aka github alerts in obsidian
+If Github alerts are good. Obsidians are better. You can use your own warning titles. 
+I wrote some CSS, its a nice blend with obsidian's styles. Works in dark mode too
+
+
 > [!INFO] 
 > Bit shorthand prefix
 > Instead of calculating what the decimal number for the binary is, we can actually just write the binary representation like this:
@@ -64,41 +49,6 @@ struct attributes {
 > ```
 > Where '0b' prefix indicates that this is a binary literal.
 
-
-<br><br>
-
----
-## Remove a bit
-To remove a bit we use the AND-EQUAL operator on a compliment of the relavent bit:
-```cs
-byte attribute &= ~16;
-```
-
-> [!NOTE] 
-> We use BitWise *AND-EQUAL*, on a ~mask
-> 
->```
->     00010100
->&=  11101111
-> ---------------
->     00000100
->```
-> We use this to remove a bit from our bitflag. This is called "clearing bits"
-> `new attribute is attributes ∩ X' `
-
-Notice how in this example we are not using an XOR operator. The reason for that is that an XOR operator flips the bit using the mask, it doesnt neccesarily turn a bit OFF. 
-
-This makes mistaken assumption heavily punished with difficult to find bugs. When working with large numbers of bitwise operations like a calculation jump tables etc. It is best that we stick to reliable, and less error prone operations. 
-
-<br><br>
-
-## Here are some warnings
-This makes mistaken assumption heavily punished with difficult to find bugs. When working with large numbers of bitwise operations like a calculation jump tables etc. It is best that we stick to reliable, and less error prone operations. 
-
-<br>
-
-> [!WARNING] 
-> This is a github synthax
 
 > [!WARNING] 
 > This is a github synthax
@@ -163,43 +113,22 @@ This makes mistaken assumption heavily punished with difficult to find bugs. Whe
 >
 > ```
 
-
 <br><br>
 
 ---
 ## Pictures and links?
-
 Below represents a picture from svg format. Very big
 
 ![](/vercel.svg)
-
 
 Lorem ipsum odor amet, consectetuer adipiscing elit. Facilisis ut maecenas magna eget mus habitant ridiculus erat. Platea velit nascetur phasellus elementum quam natoque curabitur. Ultrices curae convallis tristique leo cras. Magna odio parturient; vulputate fames tempor dis pretium risus. Ultrices porta vehicula litora mus tortor conubia. Risus vulputate in malesuada sapien, sagittis vulputate sollicitudin. Dapibus sed arcu efficitur faucibus efficitur. Netus placerat maecenas blandit tempus primis diam mollis ullamcorper. Fermentu
 
 ![](/attachments/example-nature.webp)
 
-
-
-Heres code and links
-
-`code` and [`code with link`](https://www.google.com/)
-
-`inline code with white spaces           `
-
 <br><br>
 
 ---
-## Here's some vanilla quotes
-
-> Hello 
-> Goodbye
-
-> Hello i am *itallic*  and I am **bold** and I am ***bold italic***
-
-<br><br>
-
----
-## Some codes
+## Some more code examples
 
 
 ```gradle
