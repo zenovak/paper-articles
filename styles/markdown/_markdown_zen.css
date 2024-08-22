@@ -196,6 +196,7 @@
 .markdown-body-zen table {
     width: 100%;
     table-layout: auto;
+    margin-bottom: 1rem;
 }
 
 .markdown-body-zen th {
