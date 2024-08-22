@@ -3,7 +3,7 @@ import Markdown from "react-markdown";
 
 
 export function getStaticProps() {
-    const content = getDocByPath("/docs/document.md");
+    const content = getDocByPath("/docs/sample.md");
     return { props: { content } }
   }
 
