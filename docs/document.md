@@ -6,21 +6,6 @@ This `NextJS` template was created just for devblogs. It includes a well put tog
 
 Think simplicity -- like [Jekyll](https://chirpy.cotes.page/posts/text-and-typography/) themes brought straight into NextJS.
 
-### Table
-Works like a charm. This CSS was partly sourced staight out of [`@tailwindcss/typography`](https://github.com/tailwindlabs/tailwindcss-typography)
-
-| Direction | Radiant | Pi expression | 
-| :-------: | :-----: |:-------------:|
-| NORTH     | 0       |       0       |
-| NE        | 0.785   |    Pi / 4     |
-| EAST      | 1.571   |    Pi / 2     |
-| SE        | 2.356   |    Pi / 4 * 3 |
-| SOUTH     | 3.141   |    Pi / 2     |
-| SW        | -2.356  |   - Pi / 4 * 3|
-| WEST      | -1.571  |   - Pi / 2    |
-| NW        | -0.785  |   - Pi / 4    |
-
-
 ### Code
 Packed with syntax highlighting. CSS and colors sourced from github style. I made some adjustments with a builtin custom rehype plugin that adds a *copy to clipboard* button
 writtin in VanillaJS and a language label
@@ -35,6 +20,20 @@ struct attributes {
     bool isInvinsible = false;
 }
 ```
+
+### Table
+Works like a charm. This CSS was partly sourced staight out of [`@tailwindcss/typography`](https://github.com/tailwindlabs/tailwindcss-typography)
+
+| Direction | Radiant | Pi expression | 
+| :-------: | :-----: |:-------------:|
+| NORTH     | 0       |       0       |
+| NE        | 0.785   |    Pi / 4     |
+| EAST      | 1.571   |    Pi / 2     |
+| SE        | 2.356   |    Pi / 4 * 3 |
+| SOUTH     | 3.141   |    Pi / 2     |
+| SW        | -2.356  |   - Pi / 4 * 3|
+| WEST      | -1.571  |   - Pi / 2    |
+| NW        | -0.785  |   - Pi / 4    |
 
 ### Callouts aka github alerts in obsidian
 If Github alerts are good. Obsidians are better. You can use your own warning titles. 
