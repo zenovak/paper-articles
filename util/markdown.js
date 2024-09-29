@@ -29,7 +29,11 @@ export default async function markdownToHtml(markdown) {
   return result.toString();
 }
 
-
+/**
+ * An advanced version for parsing markdown article into proper HTMl with code headers, and more
+ * @param {*} markdown 
+ * @returns 
+ */
 export async function markdownToHtml2(markdown) {
   const result = await unified()
     .use(remarkParse)
