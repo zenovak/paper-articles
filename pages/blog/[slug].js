@@ -1,3 +1,4 @@
+import { Markdown } from "@components/application/markdown/Markdown";
 import { getAllDocSlugsByDir, getMarkdownDataFromSlug } from "@util/docs";
 import { markdownToHtml2 } from "@util/markdown";
 import { useEffect } from "react";
@@ -54,9 +55,8 @@ export default function Blog({content, frontmatter}) {
         <main
             className="max-w-7xl mx-auto md:flex my-16"
         > 
-            <article 
-                className="js-toc-content max-w-3xl mx-auto px-4 markdown-body-zen"
-                dangerouslySetInnerHTML={{ __html: content }}
+            <Markdown 
+                content={content}
             />
             <aside
                 className="hidden lg:block max-w-full px-4"
