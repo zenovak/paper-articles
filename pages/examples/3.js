@@ -4,9 +4,9 @@ import Markdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import html from 'remark-html';
 
-import remarkObsidianCallout from "remark-obsidian-callout";
 import rehypeRaw from "rehype-raw";
 import rehypeHighlight from "rehype-highlight";
+import remarkObsidianCallout from "@util/plugins/remark-obsidian";
 
 
 export function getStaticProps() {

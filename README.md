@@ -43,9 +43,60 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 ---
 
-## Making a markdown renderer that just works like obsidian
+## Making a markdown renderer in NextJS with the same features as Chirpy
+There are 2 main ways to render markdown documents with the Paper starter template:
+- Via a standard NextJS entry-point
+- Via Nextra's intergrated routes
+
+<br>
+
+### NextJS entry-point
+Paper is a dedicated toolset for NextJS to render pure markdown files effectively. 
+
+We have the following components in the API:
+- `RemoteMarkdown`. Which renders markdown files from a source URL. This is a standalone component for rendering markdown files from a url
+- `Markdown`. A Standard Markdown display component. This is used to `dangerouslySetInnerHTML` for compiled markdown outputs. It uses a preconfigured
+  CSS library for its rich format.
+- `MarkdownToHTML2` A UnifiedJS compiler-set. Compiles a Markdown source file to HTML.
+
+However Mdx support is not part of ths jsx entry-point toolset. To render Mdx files, Nextra's intergration is required.
+
+<br>
+
+### Nextra
+Nextra is a NextJS plugin for markdown and Mdx. It comes with a set of features that enable `.md` and `.mdx` files within the pages
+directory to compile directly to HTML. It can be said to be a superset of `next-mdx`
+
+The files compiled are also indexed during built-time to enable client-side search library intergration. 
+
+Nextra comes with 2 default themes that supports features like "table of content", "markdown-page wide search", "sidebar navigation" straight
+out the box. However, these features' APIs are not directly exposed for tinkering/reuse, and thus constructing your own custom layouts to support these
+existing features would require reimplementing some of the component logics from sratch.
+
+Paper provides layout level components and helper functions that targets Nextra's pageOpts API to allow building Nextra themes more easily.
 
 
 
+
+
+
+
+
+
+
+
+
+
+T
+
+
+
+
+
+
+
+
+## `_posts` directory
+This directory demonstrates renderring of markdown files with frontmatter. Markdown file frontmatters are 
 
 

@@ -1,3 +1,9 @@
+/**
+ * NOTE: This is a local fork of https://github.com/escwxyz/remark-obsidian-callout
+ * Minor breaking changes may be present. If you want to use the original dependency instead,
+ * exercise cautions with existing CSS classes.
+ */
+
 import { visit } from "unist-util-visit";
 import type { Plugin } from "unified";
 import type { Node, Parent, Data } from "unist";

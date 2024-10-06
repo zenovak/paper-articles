@@ -1,3 +1,7 @@
+/**
+ * A JSX component implementation of the Code Headers. 
+ * Use this instead if the rehype plugin clashes with React's hydration
+ */
 export const CodeWrapper = () => {
     <div
         className="code-block"
