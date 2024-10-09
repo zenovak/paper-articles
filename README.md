@@ -75,6 +75,75 @@ existing features would require reimplementing some of the component logics from
 
 Paper provides layout level components and helper functions that targets Nextra's pageOpts API to allow building Nextra themes more easily.
 
+Example pageOpts looks like the following:
+```json
+{
+    "filePath":"pages/mds/index.mdx",
+    "pageMap":[
+        {
+            "name":"mds",
+            "route":"/mds",
+            "children":[
+                {
+                    "data":{
+                        "index":"Introduction",
+                        "another":"Another Page",
+                        "advanced":"Advanced (A Folder)",
+                        "about":{
+                            "title":"About",
+                            "type":"page"
+                        },
+                        "contact":{
+                            "title":"Contact ↗",
+                            "type":"page",
+                            "href":"https://twitter.com/shuding_",
+                            "newWindow":true
+                        }
+                    }
+                },
+                {
+                    "name":"about",
+                    "route":"/mds/about",
+                    "frontMatter":{
+                        "sidebarTitle":"About"
+                    }
+                },
+                {
+                    "name":"advanced",
+                    "route":"/mds/advanced",
+                    "children":[
+                        {
+                            "name":"satori",
+                            "route":"/mds/advanced/satori",
+                            "frontMatter":{
+                                "sidebarTitle":"Satori"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name":"advanced",
+                    "route":"/mds/advanced",
+                    "frontMatter":{
+                        "sidebarTitle":"Advanced"
+                    }
+                },
+                {
+                    "name":"index",
+                    "route":"/mds",
+                    "frontMatter":{
+                        "sidebarTitle":"Index"
+                    }
+                }
+            ]
+        }
+    ],
+    "frontMatter":{
+        
+    },
+    "title":"Introduction"
+}
+```
 
 
 
@@ -84,10 +153,6 @@ Paper provides layout level components and helper functions that targets Nextra'
 
 
 
-
-
-
-T
 
 
 

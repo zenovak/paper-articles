@@ -1,4 +1,5 @@
-import { getAllDocSlugsByDir, getMarkdownDataFromSlug } from "@util/docs";
+import { Markdown } from "@components/application/markdown/Markdown";
+import { getMarkdownDataFromSlug, getMarkdownDirectoryArray } from "@util/docs";
 import { markdownToHtml2 } from "@util/markdown";
 import { useEffect } from "react";
 import tocbot from "tocbot";
@@ -9,11 +10,14 @@ import tocbot from "tocbot";
  * @returns 
  */
 export function getStaticPaths() {
-    const posts = getAllDocSlugsByDir("/_posts/");
+    const posts = getMarkdownDirectoryArray("/_posts/");
     return {
         paths: posts.map((item)=> {
-            return {params: { slug: item }
-        }
+            return {
+                params: {
+                    slug: item.slug,
+                },
+            }
         }),
         fallback: false, // false or "blocking"
     }
@@ -33,7 +37,6 @@ export async function getStaticProps({params}) {
  * entries within a /docs/ directory.
  * The entries all parses regular markdown contents.
  */
-
 export default function Blog({content, frontmatter}) {
     useEffect(()=> {
         // the following component uses tocbot table of contents. It requies the markdown to have js-toc-content class
@@ -54,9 +57,8 @@ export default function Blog({content, frontmatter}) {
         <main
             className="max-w-7xl mx-auto md:flex my-16"
         > 
-            <article 
-                className="js-toc-content max-w-3xl mx-auto px-4 markdown-body-zen"
-                dangerouslySetInnerHTML={{ __html: content }}
+            <Markdown 
+                content={content}
             />
             <aside
                 className="hidden lg:block max-w-full px-4"
