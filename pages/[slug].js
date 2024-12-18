@@ -55,7 +55,7 @@ export default function Blog({content, frontmatter}) {
 
     return (
         <main
-            className="max-w-7xl mx-auto md:flex my-16"
+            className="max-w-6xl mx-auto md:flex my-16"
         > 
             <Markdown 
                 content={content}

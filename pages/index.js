@@ -10,7 +10,7 @@ export async function getStaticProps() {
 
 export default function index({ data }) {
   return (
-    <main className="max-w-7xl mx-auto">
+    <main className="max-w-6xl mx-auto">
 
       {data.map((item, index) => (
         <ArticleLink
