@@ -1,7 +1,7 @@
 import fs, { read } from 'fs';
-import { join } from 'path';
-import matter from 'gray-matter';
+import path, { join } from 'path';
 import { _StringReplaceAll } from './string';
+import { matter } from './markdown';
 
 const docsDirectory = join(process.cwd(), 'docs');
 
@@ -136,10 +136,11 @@ export function getMarkdownDataFromSlug(slug, baseDirectory) {
 export function getAllMarkdownData(directoryPath) {
   const paths = fs.readdirSync(process.cwd() + directoryPath); // paths = ["item.md", ...]
 
-  const allData = paths.map((path) => {
-    const data = getMarkdownDataFromSlug(path, directoryPath);
-    return data;
-  });
+  const allData = [];
+  for (let index = 0; index < path.length; index++) {
+    allData.push(getMarkdownDataFromSlug(path[index], directoryPath));
+  }
+  
   return allData;
 }
 
