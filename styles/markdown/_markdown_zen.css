@@ -230,6 +230,15 @@
 
 .markdown-body-zen th {
     padding-bottom: 0.75rem;
+    /* This ensures plain th is overwritten to align left by default */
+    text-align: inherit;
+    text-align: -webkit-match-parent;
+}
+.markdown-body-zen th[align="center"] {
+    text-align: center;
+}
+.markdown-body-zen th[align="right"] {
+    text-align: right;
 }
 
 .markdown-body-zen tr {
