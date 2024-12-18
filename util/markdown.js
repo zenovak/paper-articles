@@ -12,6 +12,9 @@ import rehypeHighlight from 'rehype-highlight';
 import rehypeSlug from 'rehype-slug';
 import rehypeStringify from 'rehype-stringify';
 
+import yaml from "js-yaml";
+import {default as basematter}  from 'gray-matter';
+
 
 /**
  * @deprecated will be removed on next update
@@ -70,4 +73,19 @@ export function markdownToHtmlSync(markdown) {
     .use(rehypeStringify)
     .processSync(markdown)
   return result.toString();
+}
+
+/**
+ * A wrapper around matter().
+ * Fix of this issue: https://github.com/kentcdodds/mdx-bundler/issues/72
+ * @returns `{data, content}` where data represents the frontmatter in JSON, and content the rest of the 
+ * markdown
+ */
+export function matter(source) {
+  const {data, content} = basematter(source, {
+    engines: {
+      yaml: (s) => yaml.load(s, { schema: yaml.JSON_SCHEMA }),
+    },
+  });
+  return {data, content};
 }

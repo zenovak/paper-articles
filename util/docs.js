@@ -1,7 +1,7 @@
 import fs, { read } from 'fs';
 import { join } from 'path';
-import matter from 'gray-matter';
 import { _StringReplaceAll } from './string';
+import { matter } from './markdown';
 
 const docsDirectory = join(process.cwd(), 'docs');
 
@@ -123,6 +123,48 @@ export function getMarkdownDataFromSlug(slug, baseDirectory) {
 
 
 /**
+ * Retrieves the markdownmfrontmatter, and slug based on a markdown file slug from a directory.
+ * @param {*} slug slug of the markdown within the directory, example: `"item.md"` or `"item"`.
+ * A slug that points to an index file of a parent directory will be represented as 
+ * @example
+ * ```txt
+ * Slug `""` points to "/posts/index.md"
+ * Slug `"getting-started"` points to "/posts/getting-started/index.md"
+ * ```
+ * @param {*} baseDirectory directory example: `"/posts/"`
+ * @returns {*} `{slug, content, metadata}`
+ * @example
+ * ```
+ * const data = getMarkdownDataFromSlug("item", "/posts/");
+ * // data = {slug: "item", metadata: {}}
+ * ```
+ */
+export function getMarkdownFrontmatterFromSlug(slug, baseDirectory) {
+  const realSlug = slug.replace(/\.md$/, '');
+  const fullPath = join(process.cwd() + baseDirectory, realSlug);
+  const readPath = `${fullPath}.md`;
+
+  // path as md file exists
+  if (fs.existsSync(readPath)) {
+    const fileContents = fs.readFileSync(readPath, 'utf8');
+    const { data, content } = matter(fileContents);
+
+    return { slug: realSlug, metadata: data, content };
+  }
+
+  // path as md file doesnt exist. is an index file for a branch
+  if (fs.existsSync(fullPath) && fs.statSync(fullPath).isDirectory()) {
+    const fileContents = fs.readFileSync(`${fullPath}/index.md`, 'utf8');
+    const { data } = matter(fileContents);
+
+    return { slug: realSlug, metadata: data };
+  }  
+
+  throw Error("Failed to fetch markdown data from slug. Path not exist");
+}
+
+
+/**
  * Retrieves an array of markdown contents, frontmatter, and path slugs from a directory.
  * @param {*} directoryPath directory path containing the markdown files
  * @example "/posts/"
@@ -136,10 +178,11 @@ export function getMarkdownDataFromSlug(slug, baseDirectory) {
 export function getAllMarkdownData(directoryPath) {
   const paths = fs.readdirSync(process.cwd() + directoryPath); // paths = ["item.md", ...]
 
-  const allData = paths.map((path) => {
-    const data = getMarkdownDataFromSlug(path, directoryPath);
-    return data;
-  });
+  const allData = [];
+  for (let index = 0; index < paths.length; index++) {
+    allData.push(getMarkdownDataFromSlug(paths[index], directoryPath));
+  }
+  
   return allData;
 }
 
